@@ -1,0 +1,22 @@
+uuid: 517f0a80-30c1-4998-b9c9-e9b181b41f81
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - telerion_theme
+_core:
+  default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
+id: telerion_theme_content
+theme: telerion_theme
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }
