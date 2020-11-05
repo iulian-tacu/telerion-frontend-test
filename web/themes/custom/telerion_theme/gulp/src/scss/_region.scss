@@ -137,8 +137,13 @@ header {
       }
     }
   }
+}
 
-  &.region-footer {
+footer {
+  position: relative;
+  z-index: 2;
+
+  .region.region-footer {
     display: flex;
     flex-direction: column;
     align-items: center;

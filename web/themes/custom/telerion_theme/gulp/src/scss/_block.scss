@@ -218,7 +218,7 @@
 nav#block-telerion-theme-footer {
   margin: 10px 0;
 
-  ul {
+  & > ul {
     display: flex;
     align-items: center;
     padding: 0;
