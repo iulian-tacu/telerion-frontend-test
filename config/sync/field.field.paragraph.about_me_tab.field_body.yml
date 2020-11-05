@@ -1,0 +1,19 @@
+uuid: 25c10de3-00d7-4665-b49d-0695d0ed6fa2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_body
+    - paragraphs.paragraphs_type.about_me_tab
+id: paragraph.about_me_tab.field_body
+field_name: field_body
+entity_type: paragraph
+bundle: about_me_tab
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

@@ -1,0 +1,56 @@
+uuid: f81a285f-d069-4410-9a97-990391aaf076
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.expertise_section.field_body
+    - field.field.paragraph.expertise_section.field_cards
+    - field.field.paragraph.expertise_section.field_supertitle
+    - field.field.paragraph.expertise_section.field_title
+    - paragraphs.paragraphs_type.expertise_section
+  module:
+    - paragraphs
+id: paragraph.expertise_section.default
+targetEntityType: paragraph
+bundle: expertise_section
+mode: default
+content:
+  field_body:
+    weight: 2
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_cards:
+    type: entity_reference_paragraphs
+    weight: 3
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: _none
+    third_party_settings: {  }
+    region: content
+  field_supertitle:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_title:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

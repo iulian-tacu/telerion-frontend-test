@@ -1,0 +1,32 @@
+uuid: 16157839-91a7-47c6-8f40-22d22cf6e0bf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.about_me_tab.field_body
+    - field.field.paragraph.about_me_tab.field_title
+    - paragraphs.paragraphs_type.about_me_tab
+id: paragraph.about_me_tab.default
+targetEntityType: paragraph
+bundle: about_me_tab
+mode: default
+content:
+  field_body:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

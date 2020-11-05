@@ -1,0 +1,10 @@
+uuid: 252cf45f-ccae-43e0-a9cd-22f9792f5b17
+langcode: en
+status: true
+dependencies: {  }
+id: about_me_tab
+label: 'About Me Tab'
+icon_uuid: null
+icon_default: null
+description: 'Paragraph type used to add the tabs displayed inside the ''About Me'' section on the homepage.'
+behavior_plugins: {  }

@@ -1,0 +1,66 @@
+uuid: c984b881-a943-48ce-b026-edfd0099b9f5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.about_me_section.field_button
+    - field.field.paragraph.about_me_section.field_image
+    - field.field.paragraph.about_me_section.field_supertitle
+    - field.field.paragraph.about_me_section.field_tabs
+    - field.field.paragraph.about_me_section.field_title
+    - paragraphs.paragraphs_type.about_me_section
+  module:
+    - link
+    - media_library
+    - paragraphs
+id: paragraph.about_me_section.default
+targetEntityType: paragraph
+bundle: about_me_section
+mode: default
+content:
+  field_button:
+    weight: 3
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_image:
+    weight: 4
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    type: media_library_widget
+    region: content
+  field_supertitle:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_tabs:
+    type: entity_reference_paragraphs
+    weight: 2
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: _none
+    third_party_settings: {  }
+    region: content
+  field_title:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

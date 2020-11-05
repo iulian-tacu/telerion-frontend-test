@@ -1,0 +1,42 @@
+uuid: 8b2b229a-1d91-40c9-b1f6-8e388e39a0f1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.expertise_card.field_body
+    - field.field.paragraph.expertise_card.field_image
+    - field.field.paragraph.expertise_card.field_title
+    - image.style.scale_crop_80x80
+    - paragraphs.paragraphs_type.expertise_card
+  module:
+    - media
+id: paragraph.expertise_card.default
+targetEntityType: paragraph
+bundle: expertise_card
+mode: default
+content:
+  field_body:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_image:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: scale_crop_80x80
+      image_link: ''
+    third_party_settings: {  }
+    type: media_thumbnail
+    region: content
+  field_title:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

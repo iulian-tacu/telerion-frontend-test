@@ -1,0 +1,19 @@
+uuid: 6c97f3ee-2858-4a8d-8a86-c9a76d3fff8f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_body
+    - paragraphs.paragraphs_type.expertise_section
+id: paragraph.expertise_section.field_body
+field_name: field_body
+entity_type: paragraph
+bundle: expertise_section
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

@@ -1,0 +1,10 @@
+uuid: 14b51d99-3cff-4493-9e4b-86e39fcd51ab
+langcode: en
+status: true
+dependencies: {  }
+id: hero_section
+label: 'Hero Section'
+icon_uuid: null
+icon_default: null
+description: 'Paragraph type for the hero section on homepage.'
+behavior_plugins: {  }

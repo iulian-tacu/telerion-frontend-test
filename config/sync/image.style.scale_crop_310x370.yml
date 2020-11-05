@@ -1,0 +1,15 @@
+uuid: dc096d2b-dce7-44b5-886d-2712862bbabe
+langcode: en
+status: true
+dependencies: {  }
+name: scale_crop_310x370
+label: 'Scale & Crop (310x370)'
+effects:
+  36b2b638-22f6-49aa-ac04-30bad2fcaa04:
+    uuid: 36b2b638-22f6-49aa-ac04-30bad2fcaa04
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 310
+      height: 370
+      anchor: center-center

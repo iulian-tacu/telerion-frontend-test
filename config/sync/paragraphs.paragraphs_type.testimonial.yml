@@ -1,0 +1,10 @@
+uuid: 9cbc78e0-5983-434f-8285-9d6faa4c4098
+langcode: en
+status: true
+dependencies: {  }
+id: testimonial
+label: Testimonial
+icon_uuid: null
+icon_default: null
+description: 'Paragraph type used to add testimonials on the homepage.'
+behavior_plugins: {  }

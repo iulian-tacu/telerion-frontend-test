@@ -1,0 +1,10 @@
+uuid: 288baa63-2c0f-4660-8254-0bd1c8c7ceb2
+langcode: en
+status: true
+dependencies: {  }
+id: expertise_card
+label: 'Expertise Card'
+icon_uuid: null
+icon_default: null
+description: 'Paragraph type used to add cards in the ''Expertise'' section on the homepage.'
+behavior_plugins: {  }

@@ -1,0 +1,15 @@
+uuid: db1c58e0-d240-4ddd-ad80-1c6303d1a542
+langcode: en
+status: true
+dependencies: {  }
+name: scale_crop_640x450
+label: 'Scale & Crop (640x450)'
+effects:
+  286021ec-c697-44ef-b52a-57fae777947c:
+    uuid: 286021ec-c697-44ef-b52a-57fae777947c
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 640
+      height: 450
+      anchor: center-center

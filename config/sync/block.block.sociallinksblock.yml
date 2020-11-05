@@ -1,0 +1,24 @@
+uuid: dab8003d-25aa-4655-96a4-b6f10e549334
+langcode: en
+status: true
+dependencies:
+  module:
+    - telerion_core
+  theme:
+    - telerion_theme
+id: sociallinksblock
+theme: telerion_theme
+region: header
+weight: 0
+provider: null
+plugin: social_links_block
+settings:
+  id: social_links_block
+  label: 'Social Links Block'
+  provider: telerion_core
+  label_display: '0'
+  social_links:
+    facebook: 'https://www.facebook.com/'
+    instagram: 'https://www.instagram.com/'
+    twitter: 'https://twitter.com/'
+visibility: {  }

@@ -1,0 +1,15 @@
+uuid: 253be9e3-b829-41dc-8d8f-f32e0b9f0947
+langcode: en
+status: true
+dependencies: {  }
+name: scale_crop_80x80
+label: 'Scale & Crop (80x80)'
+effects:
+  25e0d31e-464e-42e0-92e1-28b57eccac9d:
+    uuid: 25e0d31e-464e-42e0-92e1-28b57eccac9d
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 80
+      height: 80
+      anchor: center-center

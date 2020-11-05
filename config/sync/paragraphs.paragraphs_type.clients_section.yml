@@ -1,0 +1,10 @@
+uuid: ae3f89f7-c21e-4d8e-906f-d2fcf2af51da
+langcode: en
+status: true
+dependencies: {  }
+id: clients_section
+label: 'Clients Section'
+icon_uuid: null
+icon_default: null
+description: 'Paragraph type used to add the ''Clients'' section homepage.'
+behavior_plugins: {  }
