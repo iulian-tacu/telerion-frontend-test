@@ -16,9 +16,16 @@
     ],
     "require": {
         "composer/installers": "^1.9",
+        "cweagans/composer-patches": "~1.0",
+        "drupal/admin_toolbar": "^2.4",
+        "drupal/admin_toolbar_tools": "^2.4",
         "drupal/core-composer-scaffold": "^9",
         "drupal/core-project-message": "^9",
-        "drupal/core-recommended": "^9"
+        "drupal/core-recommended": "^9",
+        "drupal/devel": "^4.0",
+        "drupal/jsonapi_extras": "^3.16",
+        "drupal/paragraphs": "^1.12",
+        "kint-php/kint": "^3.3"
     },
     "conflict": {
         "drupal/drupal": "*"
@@ -80,6 +87,11 @@
                 "  * Remove the plugin that prints this message:",
                 "      composer remove drupal/core-project-message"
             ]
+        },
+        "patches": {
+            "drupal/devel": {
+                "Brings back the Available Methods & Properties tabs for Kint dumps — Issue #221": "https://raw.githubusercontent.com/politsin/snipets/master/patch/kint.patch"
+            }
         }
     }
 }

@@ -1,0 +1,193 @@
+article {
+  &.homepage {
+    &.view-mode-full {
+      .slick-dots {
+        bottom: 0;
+
+        li {
+          width: 50px;
+          height: 6px;
+
+          button {
+            display: block;
+            width: 100%;
+            height: 100%;
+            padding: 0;
+
+            &::before {
+              content: '';
+
+              width: 100%;
+              height: 100%;
+
+              background: $color-main;
+              background: #DBDBDB;
+              opacity: 1;
+            }
+          }
+
+          &.slick-active {
+            button {
+              &::before {
+                background: $color-main;
+              }
+            }
+          }
+        }
+      }
+
+      .field--name-field-hero {
+        margin-bottom: 60px;
+      }
+
+      .about-expertise-wrapper {
+        position: relative;
+        margin-bottom: 60px;
+
+        @media screen and (min-width: $lg-min) {
+          margin-bottom: 90px;
+        }
+
+        &::before {
+          display: block;
+          content: '';
+          position: absolute;
+
+          top: 0;
+          left: -15px;
+          width: 100vw;
+          height: 115.16vw;
+
+          background: url('../images/about_me_expertise_bg.svg') no-repeat;
+          background-size: 100% 100%;
+          z-index: -1;
+
+          @media screen and (min-width: $md-min) {
+            left: calc(360px - 50vw);
+          }
+          @media screen and (min-width: $lg-min) {
+            left: calc(465px - 50vw);
+          }
+          @media screen and (min-width: $xl-min) {
+            top: -150px;
+            left: calc(555px - 50vw);
+          }
+          @media screen and (min-width: 1600px) {
+            top: -250px;
+          }
+        }
+
+        .field--name-field-about-me {
+          margin-bottom: 60px;
+
+          @media screen and (min-width: $md-min) {
+            margin-bottom: 100px;
+          }
+          @media screen and (min-width: $lg-min) {
+            margin-bottom: 160px;
+          }
+          @media screen and (min-width: $xl-min) {
+            margin-bottom: 200px;
+          }
+          @media screen and (min-width: 1600px) {
+            margin-bottom: 320px;
+          }
+        }
+      }
+
+      .field--name-field-clients {
+        margin: 60px 0;
+
+        @media screen and (min-width: $md-min) {
+          margin: 90px 0 60px;
+        }
+        @media screen and (min-width: $xl-min) {
+          margin: 120px 0 60px;
+        }
+      }
+
+      .testimonials-contact {
+        position: relative;
+
+        &::before {
+          content: '';
+          position: absolute;
+
+          bottom: 50px;
+          left: 0;
+          width: 100vw;
+          height: calc(100vw / 1.1678);
+
+          z-index: -1;
+
+          background: url('../images/testimonials_contact_bg.svg') no-repeat;
+
+          @media screen and (min-width: $lg-min) {
+            top: 230px;
+            bottom: unset;
+          }
+        }
+
+        .field--name-field-testimonials {
+          padding-bottom: 40px;
+
+          @media screen and (min-width: $md-min) {
+            padding: 10px 0 70px;
+            overflow: hidden;
+          }
+          @media screen and (min-width: $xl-min) {
+            padding: 40px 0 130px;
+          }
+
+          .slick-list {
+            z-index: 1;
+            overflow: visible;
+
+            .slick-slide {
+              outline: none;
+
+              .field--name-field-image {
+                img {
+                  @media screen and (min-width: $md-min) {
+                    transition: .4s .4s;
+                  }
+                }
+              }
+
+              &:not(.slick-current) {
+                .field--name-field-image {
+                  img {
+                    @media screen and (min-width: $md-min) {
+                      box-shadow: none;
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+          .slick-dots {
+            @media screen and (min-width: $md-min) {
+              margin: 0 auto;
+              padding-left: calc(50vw - 10px);
+              text-align: left;
+
+              bottom: 59px;
+            }
+            @media screen and (min-width: $lg-min) {
+              padding-left: calc(50vw + 15px);
+            }
+            @media screen and (min-width: $xl-min) {
+              bottom: 119px;
+              padding-left: calc(50vw - 32px);
+            }
+          }
+        }
+
+        .react-contact-form-wrapper {
+          margin: 100px 0;
+        }
+      }
+    }
+  }
+}

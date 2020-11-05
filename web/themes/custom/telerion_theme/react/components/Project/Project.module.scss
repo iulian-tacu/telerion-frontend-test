@@ -1,0 +1,93 @@
+.Project {
+  position: relative;
+  width: 100%;
+  margin-top: 2px;
+  padding-top: 70.26%;
+
+  overflow: hidden;
+  transition: .2s cubic-bezier(.99,.45,.25,.99), z-index 0s .1s;
+  z-index: 1;
+
+  @media screen and (min-width: 768px) {
+    margin-top: 0;
+  }
+
+  &:nth-child(3n - 2) {
+    transform-origin: 0% 50%;
+  }
+  &:nth-child(3n) {
+    transform-origin: 100% 50%;
+  }
+
+  &:hover {
+    @media screen and (min-width: 1200px) {
+      transform: scale(1.1);
+
+      transition: .2s cubic-bezier(.99,.45,.25,.99);
+      box-shadow: 0 20px 80px 5px rgba(0, 0, 0, .5);
+      z-index: 3;
+    }
+
+    :global(.project-bottom) {
+      @media screen and (min-width: 1200px) {
+        transform: translateY(0);
+      }
+    }
+  }
+
+  :global(.project-bottom) {
+    position: absolute;
+
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 15px;
+    box-sizing: border-box;
+
+    background: #3B43F2;
+    transition: .3s .2s cubic-bezier(.99,.45,.25,.99);
+
+    @media screen and (min-width: 576px) {
+      padding: 15px 20px;
+    }
+    @media screen and (min-width: 1200px) {
+      padding: 20px 30px;
+      transform: translateY(100%);
+    }
+
+    :global(.published) {
+      font-size: 13px;
+      color: #FFF;
+    }
+
+    :global(.title) {
+      font-size: 18px;
+      color: #FFF;
+
+      @media screen and (min-width: 576px) {
+        font-size: 20px;
+        margin-top: 10px;
+      }
+      @media screen and (min-width: 576px) {
+        font-size: 16px;
+      }
+      @media screen and (min-width: 992px) {
+        font-size: 18px;
+      }
+      @media screen and (min-width: 1200px) {
+        font-size: 24px;
+        margin-top: 10px;
+      }
+    }
+  }
+
+  & > img {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}

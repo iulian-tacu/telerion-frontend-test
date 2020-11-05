@@ -1,0 +1,88 @@
+<?php
+
+use Drupal\Component\Utility\Html;
+
+/**
+ * Implements hook_preprocess_region().
+ */
+function telerion_theme_preprocess_region(&$variables) {
+  $variables['attributes']['class'][] = 'region';
+  if ($variables['elements']['#region']) {
+    $variables['attributes']['class'][] = 'region-' . $variables['elements']['#region'];
+  }
+}
+
+/**
+ * Implements hook_preprocess_node().
+ */
+function telerion_theme_preprocess_node(&$variables) {
+  $node = $variables['node'];
+  $variables['attributes']['class'] = [
+    $node->bundle(),
+    'view-mode-' . $variables['view_mode'],
+  ];
+  $variables['content_attributes']['class'] = 'node-content';
+}
+/**
+ * Implements hook_preprocess_node().
+ */
+function telerion_theme_preprocess_node__homepage(&$variables) {
+  $variables['#attached']['library'][] = 'telerion_theme/react-portfolio';
+  $variables['#attached']['library'][] = 'telerion_theme/react-contact-form';
+}
+
+/**
+ * Implements hook_preprocess_paragraph().
+ */
+function telerion_theme_preprocess_paragraph__hero_section(&$variables) {
+  $variables['content']['field_button']['#attributes']['class'][] = 'btn primary big';
+}
+
+/**
+ * Implements hook_preprocess_paragraph().
+ */
+function telerion_theme_preprocess_paragraph__about_me_section(&$variables) {
+  $variables['content']['field_button']['#attributes']['class'][] = 'btn primary big';
+  $variables['#attached']['library'][] = 'telerion_theme/paragraph-about-me-section';
+  $paragraph_entity = $variables['paragraph'];
+  if ($paragraph_entity->hasField('field_tabs')) {
+    $nested_paragraph_entities = $variables['paragraph']->field_tabs->referencedEntities();
+    if (count($nested_paragraph_entities)) {
+      foreach($nested_paragraph_entities as $tab_paragraph_entity) {
+        $paragraph_title = $tab_paragraph_entity->field_title->value;
+        $variables['tabs'][] = [
+          'label' => $paragraph_title,
+          'value' => strtolower(str_replace(' ', '-', $paragraph_title)),
+        ];
+        $variables['paragraphs'][] = [
+          'value' => $tab_paragraph_entity->field_body->value,
+          'tab' => strtolower(str_replace(' ', '-', $paragraph_title)),
+        ];
+      }
+    }
+  }
+}
+/**
+ * Implements hook_preprocess_paragraph().
+ */
+function telerion_theme_preprocess_paragraph__expertise_section(&$variables) {
+  $variables['#attached']['library'][] = 'telerion_theme/slick-carousel';
+  $variables['#attached']['library'][] = 'telerion_theme/paragraph-expertise-section';
+}
+
+/**
+ * Implements hook_preprocess_field().
+ */
+function telerion_theme_preprocess_field(&$variables) {
+  $variables['title_attributes']['class'][] = 'label';
+  $variables['attributes']['class'][] = 'field';
+  $variables['attributes']['class'][] = 'field--name-' . Html::cleanCssIdentifier($variables['field_name']);
+}
+
+/**
+ * Implements hook_preprocess_field().
+ */
+function telerion_theme_preprocess_field__field_testimonials(&$variables) {
+  $variables['#attached']['library'][] = 'telerion_theme/slick-carousel';
+  $variables['#attached']['library'][] = 'telerion_theme/field-testimonials';
+}

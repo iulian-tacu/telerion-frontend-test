@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="56px" height="56px" viewBox="0 0 56 56" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <desc>Created with Lunacy</desc>
+  <defs>
+    <path d="M27.5 55C42.6878 55 55 42.6878 55 27.5C55 12.3122 42.6878 0 27.5 0C12.3122 0 0 12.3122 0 27.5C0 42.6878 12.3122 55 27.5 55Z" id="path_1" />
+    <clipPath id="mask_1">
+      <use xlink:href="#path_1" />
+    </clipPath>
+  </defs>
+  <g id="Logo" transform="translate(0.5 0.5)">
+    <g id="Box">
+      <path d="M27.5 55C42.6878 55 55 42.6878 55 27.5C55 12.3122 42.6878 0 27.5 0C12.3122 0 0 12.3122 0 27.5C0 42.6878 12.3122 55 27.5 55Z" id="Oval" fill="#FFFFFF" fill-rule="evenodd" stroke="none" />
+      <g clip-path="url(#mask_1)">
+        <g id="Color/DarkBlue">
+          <path d="M0 0L55 0L55 55L0 55L0 0Z" id="Rectangle" fill="#3B43F2" fill-rule="evenodd" stroke="none" />
+        </g>
+      </g>
+    </g>
+    <g fill="#FFFFFF" stroke="none" id="O" transform="translate(14.5 2)">
+      <path d="M13.396 37.91Q9.588 37.944 6.868 36.516Q4.148 35.088 2.686 32.402Q1.224 29.716 1.224 25.942Q1.224 22.168 2.771 19.261Q4.318 16.354 7.14 14.722Q9.962 13.09 13.838 13.09Q17.272 13.09 19.856 14.586Q22.44 16.082 23.885 18.751Q25.33 21.42 25.33 25.024Q25.33 28.9 23.8 31.79Q22.27 34.68 19.567 36.278Q16.864 37.876 13.396 37.91ZM13.192 32.98Q16.082 32.98 17.884 30.889Q19.686 28.798 19.686 25.092Q19.686 21.862 18.054 19.941Q16.422 18.02 13.668 18.02Q11.662 18.02 10.132 19.006Q8.602 19.992 7.735 21.743Q6.868 23.494 6.868 25.84Q6.868 29.24 8.551 31.11Q10.234 32.98 13.192 32.98Z" />
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,70 @@
+.Tabs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: -10px;
+
+  @media screen and (min-width: 768px) {
+    margin-left: -20px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-left: -30px;
+  }
+
+  :global(.tab) {
+    position: relative;
+
+    padding: 10px;
+
+    font-size: 14px;
+    line-height: 15px;
+    text-align: center;
+    color: #FFF;
+
+    cursor: pointer;
+
+    @media screen and (min-width: 768px) {
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+    @media screen and (min-width: 1200px) {
+      padding: 10px 30px;
+      font-size: 18px;
+    }
+
+    &::after {
+      content: '';
+
+      position: absolute;
+      bottom: 0;
+      left: 10px;
+      width: 0;
+      height: 2px;
+
+      background: #FFF;
+
+      @media screen and (min-width: 768px) {
+        left: 20px;
+      }
+      @media screen and (min-width: 1200px) {
+        left: 30px;
+      }
+    }
+
+    &:global(.active) {
+      pointer-events: none;
+
+      &::after {
+        width: calc(100% - 20px);
+        transition: .3s cubic-bezier(.99,.45,.25,.99);
+
+        @media screen and (min-width: 768px) {
+          width: calc(100% - 40px);
+        }
+        @media screen and (min-width: 1200px) {
+          width: calc(100% - 60px);
+        }
+      }
+    }
+  }
+}

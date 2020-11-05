@@ -1,0 +1,47 @@
+* {
+  font-family: 'Livvic', sans-serif;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+
+  .body-inner-wrapper {
+    overflow: hidden;
+
+    .layout-container {
+      main {
+        position: relative;
+        z-index: 1;
+
+        & > #main-content {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+a {
+  display: inline-block;
+}
+
+.responsive-container {
+  padding: 0 15px;
+  box-sizing: border-box;
+
+  @media screen and (min-width: $md-min) {
+    width: 750px;
+    margin: 0 auto;
+  }
+  @media screen and (min-width: $lg-min) {
+    width: 970px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  @media screen and (min-width: $xl-min) {
+    width: 1170px;
+    margin: 0 auto;
+    padding: 0 30px;
+  }
+}
