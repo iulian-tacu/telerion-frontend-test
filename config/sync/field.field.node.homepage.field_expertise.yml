@@ -1,0 +1,43 @@
+uuid: f936e9b5-36e3-4c18-a942-93def5db0be2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_expertise
+    - node.type.homepage
+    - paragraphs.paragraphs_type.expertise_section
+  module:
+    - entity_reference_revisions
+id: node.homepage.field_expertise
+field_name: field_expertise
+entity_type: node
+bundle: homepage
+label: Expertise
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      expertise_section: expertise_section
+    target_bundles_drag_drop:
+      about_me_section:
+        weight: 6
+        enabled: false
+      about_me_tab:
+        weight: 7
+        enabled: false
+      expertise_card:
+        weight: 8
+        enabled: false
+      expertise_section:
+        enabled: true
+        weight: 9
+      hero_section:
+        weight: 10
+        enabled: false
+field_type: entity_reference_revisions

@@ -1,0 +1,50 @@
+uuid: ccb485fe-477f-4f5f-aa81-cf2034b5f16e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.clients_section.field_body
+    - field.field.paragraph.clients_section.field_clients
+    - field.field.paragraph.clients_section.field_supertitle
+    - field.field.paragraph.clients_section.field_title
+    - paragraphs.paragraphs_type.clients_section
+  module:
+    - entity_reference_revisions
+id: paragraph.clients_section.default
+targetEntityType: paragraph
+bundle: clients_section
+mode: default
+content:
+  field_body:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_clients:
+    type: entity_reference_revisions_entity_view
+    weight: 3
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_supertitle:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_title:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

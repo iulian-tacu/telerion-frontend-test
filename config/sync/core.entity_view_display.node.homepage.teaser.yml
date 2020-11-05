@@ -1,0 +1,32 @@
+uuid: 2c6aea92-183c-48f4-b8d8-bb3f3bdc382c
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.homepage.field_about_me
+    - field.field.node.homepage.field_clients
+    - field.field.node.homepage.field_contact_
+    - field.field.node.homepage.field_expertise
+    - field.field.node.homepage.field_hero
+    - field.field.node.homepage.field_testimonials
+    - node.type.homepage
+  module:
+    - user
+id: node.homepage.teaser
+targetEntityType: node
+bundle: homepage
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_about_me: true
+  field_clients: true
+  field_contact_: true
+  field_expertise: true
+  field_hero: true
+  field_testimonials: true

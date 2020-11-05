@@ -1,0 +1,800 @@
+.paragraph {
+  &.paragraph--type--hero-section {
+    &.paragraph--view-mode--default {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      position: relative;
+
+      padding: 40px 0 120px;
+
+      @media screen and (min-width: $sm-min) {
+        padding: 80px 0 160px;
+      }
+      @media screen and (min-width: $lg-min) {
+        padding: 100px 0 180px;
+      }
+      @media screen and (min-width: $xl-min) {
+        padding: 120px 0 200px;
+      }
+      @media screen and (min-width: 1920px) {
+        justify-content: space-between;
+      }
+
+      & > .text {
+        .field--name-field-supertitle {
+          color: $color-text;
+
+          @media screen and (min-width: $sm-min) {
+            font-size: 18px;
+          }
+          @media screen and (min-width: 1600px) {
+            font-size: 22px;
+          }
+        }
+
+        .field--name-field-title {
+          font-size: 32px;
+          line-height: 1.8;
+          font-weight: 700;
+          color: $color-text;
+
+          @media screen and (min-width: $sm-min) {
+            font-size: 42px;
+          }
+          @media screen and (min-width: $md-min) {
+            font-size: 48px;
+          }
+          @media screen and (min-width: $lg-min) {
+            font-size: 54px;
+            line-height: 1.6;
+          }
+          @media screen and (min-width: $xl-min) {
+            font-size: 60px;
+          }
+          @media screen and (min-width: 1600px) {
+            font-size: 80px;
+          }
+        }
+
+        .field--name-field-body {
+          max-width: 250px;
+          font-size: 14px;
+          color: $color-text-light;
+
+          @media screen and (min-width: $sm-min) {
+            max-width: 300px;
+          }
+          @media screen and (min-width: $lg-min) {
+            max-width: 320px;
+            font-size: 16px;
+          }
+          @media screen and (min-width: 1600px) {
+            font-size: 20px;
+            max-width: 400px;
+          }
+        }
+
+        .field--name-field-button {
+          position: absolute;
+
+          bottom: 40px;
+          left: 0;
+          width: 100%;
+
+          text-align: center;
+
+          @media screen and (min-width: $md-min) {
+            position: relative;
+
+            bottom: unset;
+            left: unset;
+            margin-top: 30px;
+
+            text-align: left;
+          }
+
+          a {
+            width: 100%;
+            max-width: 320px;
+            box-sizing: border-box;
+            text-align: center;
+
+            @media screen and (min-width: $md-min) {
+              width: unset;
+            }
+          }
+        }
+      }
+
+      & > .image {
+        flex: 1 0 120px;
+        position: relative;
+        max-width: 200px;
+
+        @media screen and (min-width: $md-min) {
+          max-width: 280px;
+        }
+        @media screen and (min-width: $lg-min) {
+          max-width: 360px;
+        }
+        @media screen and (min-width: $xl-min) {
+          max-width: 420px;
+        }
+        @media screen and (min-width: 1600px) {
+          max-width: 500px;
+        }
+
+        .field--name-field-image {
+          img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+
+            box-shadow: 8px 2px 16px rgba(0, 0, 0, .15);
+
+            @media screen and (min-width: $md-min) {
+              box-shadow: 20px 2px 40px rgba( 0, 0, 0, .2);
+            }
+            @media screen and (min-width: $xl-min) {
+              box-shadow: 40px 2px 80px rgba( 0, 0, 0, .35);
+            }
+          }
+        }
+      }
+
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+
+        top: -60px;
+        left: -15px;
+        width: 100vw;
+        height: 67.29vw;
+
+        background: url('../images/hero_bg.svg') no-repeat;
+        background-size: 100% 100%;
+        z-index: -1;
+
+        @media screen and (min-width: $md-min) {
+          top: -80px;
+          left: calc(369px - 50vw);
+        }
+        @media screen and (min-width: $lg-min) {
+          left: calc(476px - 50vw);
+        }
+        @media screen and (min-width: $xl-min) {
+          width: 90vw;
+          height: 60.56vw;
+          left: calc(570px - 40vw);
+        }
+        @media screen and (min-width: 1920px) {
+          top: -110px;
+        }
+      }
+    }
+  }
+
+  &.paragraph--type--about-me-section {
+    &.paragraph--view-mode--default {
+      position: relative;
+
+      @media screen and (min-width: $sm-min) {
+        display: flex;
+      }
+
+      .image {
+        position: absolute;
+
+        top: 90px;
+        width: 100%;
+
+        @media screen and (min-width: $sm-min) {
+          position: relative;
+          top: unset;
+          flex: 0 0 200px;
+        }
+        @media screen and (min-width: $md-min) {
+          flex: 0 0 280px;
+        }
+        @media screen and (min-width: $lg-min) {
+          flex: 0 0 360px;
+          margin-left: 40px;
+        }
+        @media screen and (min-width: $xl-min) {
+          flex: 0 0 420px;
+          margin-left: 90px;
+        }
+        @media screen and (min-width: 1600px) {
+          flex: 0 0 500px;
+        }
+
+        .field--name-field-image {
+          img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            border-radius: 14px;
+
+            box-shadow: -8px 2px 16px rgba(0, 0, 0, .15);
+
+            @media screen and (min-width: $md-min) {
+              box-shadow: -20px 2px 40px rgba( 0, 0, 0, .2);
+            }
+            @media screen and (min-width: $xl-min) {
+              border-radius: 18px;
+              box-shadow: -40px 2px 80px rgba( 0, 0, 0, .35);
+            }
+          }
+        }
+      }
+
+      .content-wrapper {
+        @media screen and (min-width: $sm-min) {
+          display: flex;
+          flex-direction: column;
+
+          min-height: 200px;
+          padding-left: 30px;
+        }
+        @media screen and (min-width: $md-min) {
+          min-height: 280px;
+          max-width: 400px;
+        }
+        @media screen and (min-width: $lg-min) {
+          min-height: 360px;
+        }
+        @media screen and (min-width: $xl-min) {
+          min-height: 420px;
+          padding-left: 90px;
+        }
+        @media screen and (min-width: 1600px) {
+          min-height: 500px;
+        }
+
+        .field--name-field-supertitle {
+          color: $color-text;
+
+          @media screen and (min-width: $sm-min) {
+            font-size: 18px;
+          }
+          @media screen and (min-width: 1600px) {
+            font-size: 22px;
+          }
+        }
+
+        .field--name-field-title {
+          margin-bottom: 100vw;
+
+          font-size: 32px;
+          line-height: 1.8;
+          font-weight: 700;
+          color: $color-text;
+
+          @media screen and (min-width: $sm-min) {
+            font-size: 42px;
+            margin-bottom: 0;
+          }
+          @media screen and (min-width: $md-min) {
+            font-size: 48px;
+          }
+          @media screen and (min-width: $lg-min) {
+            font-size: 54px;
+            line-height: 1.6;
+          }
+          @media screen and (min-width: $xl-min) {
+            font-size: 60px;
+          }
+          @media screen and (min-width: 1600px) {
+            font-size: 80px;
+          }
+        }
+
+        .tabs {
+          .toggles {
+            display: flex;
+            margin-left: -10px;
+
+            @media screen and (min-width: 360px) {
+              margin-left: -20px;
+            }
+
+            .toggle {
+              position: relative;
+
+              padding: 10px;
+
+              font-size: 14px;
+              cursor: pointer;
+
+              @media screen and (min-width: 360px) {
+                font-size: 16px;
+                padding: 10px 20px;
+              }
+
+              &::after {
+                content: '';
+                position: absolute;
+
+                bottom: 0;
+                left: 10px;
+                width: 0;
+                height: 2px;
+
+                background: $color-main;
+
+                @media screen and (min-width: 360px) {
+                  left: 20px;
+                }
+              }
+
+              &.active {
+                cursor: unset;
+                pointer-events: none;
+
+                &::after {
+                  width: calc(100% - 20px);
+                  transition: .3s cubic-bezier(.99,.45,.25,.99);
+
+                  @media screen and (min-width: 360px) {
+                    width: calc(100% - 40px);
+                  }
+                }
+              }
+            }
+          }
+
+          .body {
+            margin: 20px 0;
+            font-size: 14px;
+            color: $color-text-light;
+
+            @media screen and (min-width: $md-min) {
+              font-size: 16px;
+            }
+          }
+        }
+
+        .field--name-field-button {
+          width: 100%;
+          text-align: center;
+
+          @media screen and (min-width: $sm-min) {
+            margin-top: auto;
+            text-align: left;
+          }
+
+          a {
+            width: 100%;
+            max-width: 320px;
+            box-sizing: border-box;
+            text-align: center;
+
+            @media screen and (min-width: $sm-min) {
+              width: unset;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.paragraph--type--expertise-section {
+    .field--name-field-supertitle {
+      color: $color-text;
+      text-align: center;
+
+      @media screen and (min-width: $sm-min) {
+        font-size: 18px;
+      }
+      @media screen and (min-width: 1600px) {
+        font-size: 22px;
+      }
+    }
+
+    & > .field--name-field-title {
+      font-size: 32px;
+      line-height: 1.8;
+      font-weight: 700;
+      text-align: center;
+      color: $color-text;
+
+      @media screen and (min-width: $sm-min) {
+        font-size: 42px;
+      }
+      @media screen and (min-width: $md-min) {
+        font-size: 48px;
+      }
+      @media screen and (min-width: $lg-min) {
+        font-size: 54px;
+        line-height: 1.6;
+      }
+      @media screen and (min-width: $xl-min) {
+        font-size: 60px;
+        margin: 10px 0;
+      }
+      @media screen and (min-width: 1600px) {
+        font-size: 80px;
+      }
+    }
+
+    & > .field--name-field-body {
+      max-width: 300px;
+      margin: 0 auto;
+
+      font-size: 14px;
+      text-align: center;
+      color: $color-text-light;
+
+      @media screen and (min-width: $lg-min) {
+        max-width: 330px;
+        font-size: 16px;
+      }
+      @media screen and (min-width: 1600px) {
+        font-size: 20px;
+        max-width: 400px;
+      }
+    }
+
+    .field--name-field-cards {
+      max-width: 430px;
+      margin: 50px auto 0;
+      padding-bottom: 50px;
+
+      @media screen and (min-width: $sm-min) {
+        max-width: 480px;
+      }
+      @media screen and (min-width: $md-min) {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 30px;
+        justify-items: center;
+
+        max-width: unset;
+        padding-top: 40px;
+      }
+      @media screen and (min-width: $lg-min) {
+        max-width: 980px;
+        grid-gap: 40px;
+      }
+      @media screen and (min-width: $xl-min) {
+        margin-top: 60px;
+      }
+
+      & > div {
+        @media screen and (min-width: $lg-min) {
+          max-width: 300px;
+        }
+
+        &:nth-child(2) {
+          @media screen and (min-width: $md-min) {
+            margin-top: -40px;
+          }
+
+          .paragraph--type--expertise-card {
+            box-shadow: 0 10px 40px rgba(0, 0, 0, .10);
+
+            @media screen and (min-width: $xl-min) {
+              box-shadow: 0 20px 80px rgba(0, 0, 0, .15);
+            }
+          }
+        }
+      }
+
+      .slick-list {
+        overflow: visible;
+
+        .slick-slide {
+          padding: 0 15px;
+          outline: none;
+
+          @media screen and (min-width: $sm-min) {
+            padding: 0 40px;
+          }
+        }
+      }
+
+      .slick-arrow {
+        top: 0;
+        width: 60px;
+        height: calc(100% - 50px);
+        transform: unset;
+
+        opacity: 0;
+        z-index: 1;
+
+        @media screen and (min-width: 480px) {
+          width: calc(50vw - 180px);
+        }
+        @media screen and (min-width: $sm-min) {
+          width: calc(50vw - 230px);
+        }
+
+        &.slick-prev {
+          left: calc(50% - 50vw);
+        }
+
+        &.slick-next {
+          right: calc(50% - 50vw);
+        }
+      }
+    }
+  }
+
+  &.paragraph--type--expertise-card  {
+    &.paragraph--view-mode--default {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      padding: 50px 20px;
+      border-radius: 14px;
+
+      background: #FFF;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, .1);
+
+      @media screen and (min-width: $xl-min) {
+        border-radius: 18px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, .1);
+      }
+
+      .field--name-field-title {
+        height: 44px;
+        margin: 20px 0;
+
+        font-size: 20px;
+        line-height: 22px;
+        text-align: center;
+        color: $color-text;
+
+        @media screen and (min-width: $lg-min) {
+          height: unset;
+        }
+        @media screen and (min-width: $xl-min) {
+          font-size: 24px;
+          line-height: 32px;
+        }
+      }
+
+      .field--name-field-body {
+        font-weight: 300;
+        text-align: center;
+        color: $color-text-light;
+
+        @media screen and (min-width: $md-min) {
+          font-size: 14px;
+        }
+        @media screen and (min-width: $lg-min) {
+          font-size: 16px;
+        }
+        @media screen and (min-width: $xl-min) {
+          font-size: 18px;
+          line-height: 28px;
+        }
+      }
+    }
+  }
+
+  &.paragraph--type--clients-section {
+    &.paragraph--view-mode--default {
+      .field--name-field-supertitle {
+        color: $color-text;
+        text-align: center;
+
+        @media screen and (min-width: $sm-min) {
+          font-size: 18px;
+        }
+        @media screen and (min-width: 1600px) {
+          font-size: 22px;
+        }
+      }
+
+      & > .field--name-field-title {
+        font-size: 32px;
+        line-height: 1.8;
+        font-weight: 700;
+        text-align: center;
+        color: $color-text;
+
+        @media screen and (min-width: $sm-min) {
+          font-size: 42px;
+        }
+        @media screen and (min-width: $md-min) {
+          font-size: 48px;
+        }
+        @media screen and (min-width: $lg-min) {
+          font-size: 54px;
+          line-height: 1.6;
+        }
+        @media screen and (min-width: $xl-min) {
+          font-size: 60px;
+          margin: 10px 0;
+        }
+        @media screen and (min-width: 1600px) {
+          font-size: 80px;
+        }
+      }
+
+      & > .field--name-field-body {
+        max-width: 300px;
+        margin: 0 auto;
+
+        font-size: 14px;
+        text-align: center;
+        color: $color-text-light;
+
+        @media screen and (min-width: $lg-min) {
+          max-width: 330px;
+          font-size: 16px;
+        }
+        @media screen and (min-width: 1600px) {
+          font-size: 20px;
+          max-width: 400px;
+        }
+      }
+
+      .field--name-field-clients {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @media screen and (min-width: $sm-min) {
+          flex-direction: row;
+          justify-content: space-between;
+        }
+        @media screen and (min-width: $md-min) {
+          margin: 60px 0;
+        }
+        @media screen and (min-width: $xl-min) {
+          margin: 60px 0;
+        }
+
+        & > div {
+          flex: 1;
+          max-width: 165px;
+          opacity: .3;
+          transition: .3s;
+
+          img {
+            width: 100%;
+            height: auto;
+          }
+
+          &:hover {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+
+  &.paragraph--type--testimonial {
+    &.paragraph--view-mode--default {
+      display: flex;
+      flex-direction: column;
+
+      @media screen and (min-width: $md-min) {
+        flex-direction: row;
+      }
+
+      .image {
+        margin: 0 auto;
+
+        @media screen and (min-width: $md-min) {
+          margin: 0 0 0 calc(50vw - 355px);
+          height: 360px;
+        }
+        @media screen and (min-width: $lg-min) {
+          margin: 0 0 0 calc(50vw - 380px);
+        }
+        @media screen and (min-width: $xl-min) {
+          margin: 0 0 0 calc(50vw - 447px);
+        }
+
+        img {
+          border-radius: 14px;
+
+          box-shadow: 0 10px 20px rgba(0, 0, 0, .15);
+
+          @media screen and (min-width: $md-min) {
+            box-shadow: 20px 20px 30px rgba(0, 0, 0, .25);
+          }
+          @media screen and (min-width: $lg-min) {
+            box-shadow: -20px 20px 40px rgba(0, 0, 0, .25);
+          }
+          @media screen and (min-width: $xl-min) {
+            border-radius: 18px;
+            box-shadow: -40px 40px 80px rgba(0, 0, 0, .5);
+          }
+        }
+      }
+
+      .content-wrapper {
+        @media screen and (min-width: $md-min) {
+          padding-left: 40px;
+        }
+        @media screen and (min-width: $lg-min) {
+          padding-left: 90px;
+        }
+        @media screen and (min-width: $xl-min) {
+          padding-left: 110px;
+        }
+
+        .field--name-field-body {
+          position: relative;
+
+          max-width: 360px;
+          margin: 15px auto;
+          padding-top: 60px;
+
+          color: $color-text;
+          font-size: 14px;
+          line-height: 1.5;
+          text-align: center;
+
+          @media screen and (min-width: $sm-min) {
+            font-size: 16px;
+            margin: 20px auto;
+          }
+          @media screen and (min-width: $md-min) {
+            margin: 0 0 20px;
+            padding-top: 80px;
+            text-align: left;
+          }
+          @media screen and (min-width: $xl-min) {
+            max-width: 475px;
+            margin: 30px 0;
+            font-size: 18px;
+          }
+
+          &::before {
+            @include icon-quote('%23459EFF', 3);
+
+            content: '';
+
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 56px;
+            height: 56px;
+          }
+        }
+
+        .field--name-field-author {
+          max-width: 360px;
+          margin: 0 auto;
+
+          font-size: 17px;
+          line-height: 1.5;
+          font-weight: bold;
+
+          @media screen and (min-width: $md-min) {
+            font-size: 19px;
+          }
+          @media screen and (min-width: $xl-min) {
+            max-width: 475px;
+            font-size: 21px;
+          }
+        }
+
+        .field--name-field-position {
+          max-width: 360px;
+          margin: 0 auto;
+
+          font-size: 17px;
+          font-weight: 300;
+          line-height: 1.5;
+
+          @media screen and (min-width: $md-min) {
+            font-size: 19px;
+          }
+          @media screen and (min-width: $xl-min) {
+            max-width: 475px;
+            font-size: 21px;
+          }
+        }
+      }
+    }
+  }
+}

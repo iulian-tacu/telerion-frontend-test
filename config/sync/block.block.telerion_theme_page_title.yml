@@ -1,0 +1,30 @@
+uuid: f386290d-7330-4af3-9cea-1694ec4f2687
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+  theme:
+    - telerion_theme
+_core:
+  default_config_hash: 7rR9chwXvdM2H8OYMAYx9Zj3GGlPMrZp_M3ZA4thYTk
+id: telerion_theme_page_title
+theme: telerion_theme
+region: content
+weight: -50
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      article: article
+      page: page
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

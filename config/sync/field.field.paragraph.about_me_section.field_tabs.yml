@@ -1,0 +1,37 @@
+uuid: 91c3bd63-74b9-4596-b875-a3c45ad51487
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_tabs
+    - paragraphs.paragraphs_type.about_me_section
+    - paragraphs.paragraphs_type.about_me_tab
+  module:
+    - entity_reference_revisions
+id: paragraph.about_me_section.field_tabs
+field_name: field_tabs
+entity_type: paragraph
+bundle: about_me_section
+label: Tabs
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      about_me_tab: about_me_tab
+    target_bundles_drag_drop:
+      about_me_section:
+        weight: 4
+        enabled: false
+      about_me_tab:
+        enabled: true
+        weight: 5
+      hero_section:
+        weight: 6
+        enabled: false
+field_type: entity_reference_revisions

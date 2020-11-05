@@ -1,0 +1,68 @@
+uuid: b8ac361c-73b7-4f42-a278-38b5a173c042
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.about_me_section.field_button
+    - field.field.paragraph.about_me_section.field_image
+    - field.field.paragraph.about_me_section.field_supertitle
+    - field.field.paragraph.about_me_section.field_tabs
+    - field.field.paragraph.about_me_section.field_title
+    - image.style.scale_crop_500x500
+    - paragraphs.paragraphs_type.about_me_section
+  module:
+    - entity_reference_revisions
+    - link
+    - media
+id: paragraph.about_me_section.default
+targetEntityType: paragraph
+bundle: about_me_section
+mode: default
+content:
+  field_button:
+    weight: 3
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_image:
+    weight: 4
+    label: hidden
+    settings:
+      image_style: scale_crop_500x500
+      image_link: ''
+    third_party_settings: {  }
+    type: media_thumbnail
+    region: content
+  field_supertitle:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tabs:
+    type: entity_reference_revisions_entity_view
+    weight: 2
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_title:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

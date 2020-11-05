@@ -1,0 +1,6 @@
+core_version_requirement: 9.x
+type: module
+package: Telerion
+
+name: 'Telerion Core'
+description: 'Provides generic functionality for Telerion Frontend Test website.'

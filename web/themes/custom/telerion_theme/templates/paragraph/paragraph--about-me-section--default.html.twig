@@ -1,0 +1,25 @@
+{% extends "paragraph.html.twig" %}
+    {% block content %}
+      <div class="image">
+        {{ content.field_image }}
+      </div>
+      <div class="content-wrapper">
+        {{ content.field_supertitle }}
+        {{ content.field_title }}
+        <div class="tabs">
+          <div class="toggles">
+            {% for index,tab in tabs %}
+              <div class="toggle {% if index == 0 %}{{ ' active' }}{% endif %}" data-tab="{{ tab.value }}">{{ tab.label }}</div>
+            {% endfor %}
+          </div>
+          <div class="body">
+            {% for paragraph in paragraphs %}
+              <div class="paragraph {{ paragraph.tab }}">
+                {{ paragraph.value }}
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+        {{ content.field_button }}
+      </div>
+    {% endblock %}

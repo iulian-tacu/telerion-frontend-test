@@ -1,0 +1,15 @@
+uuid: 86c87529-0169-4df7-806b-eeff955decf7
+langcode: en
+status: true
+dependencies: {  }
+name: scale_crop_500x500
+label: 'Scale & Crop (500x500)'
+effects:
+  8989e1d1-5425-4e99-b2d7-df5ca1db8702:
+    uuid: 8989e1d1-5425-4e99-b2d7-df5ca1db8702
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 500
+      height: 500
+      anchor: center-center

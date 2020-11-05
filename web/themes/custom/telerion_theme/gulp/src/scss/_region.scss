@@ -1,0 +1,163 @@
+header {
+  position: relative;
+  height: 60px;
+  z-index: 2;
+
+  @media screen and (min-width: $md-min) {
+    height: 80px;
+  }
+}
+
+.region {
+  &.region-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+
+    top: 0;
+    left: 0;
+    width: calc(100% - 20px);
+    height: 60px;
+    padding: 0 10px;
+
+    background: $header-bg;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+
+    @media screen and (min-width: $md-min) {
+      height: 80px;
+    }
+    @media screen and (min-width: $lg-min) {
+      padding: 0 20px;
+    }
+    @media screen and (min-width: $xl-min) {
+      justify-content: unset;
+      position: relative;
+
+      width: 100%;
+      max-width: calc(1200px - 30px);
+      margin: 0 auto;
+      padding: 0 30px;
+
+      background: none;
+      box-shadow: none;
+    }
+
+    #block-telerion-theme-branding {
+      @media screen and (min-width: $xl-min) {
+        margin-right: 30px;
+      }
+    }
+
+    #block-telerion-theme-main-menu {
+      position: absolute;
+
+      top: 60px;
+      left: 100%;
+      width: 100%;
+
+      transition: .4s cubic-bezier(.99,.45,.25,.99);
+
+      @media screen and (min-width: $md-min) {
+        top: 80px;
+      }
+      @media screen and (min-width: $xl-min) {
+        position: relative;
+
+        top: unset;
+        left: unset;
+        width: unset;
+        margin-right: auto;
+      }
+    }
+
+    #block-sociallinksblock {
+      display: none;
+
+      @media screen and (min-width: $xl-min) {
+        display: inline-block;
+      }
+    }
+
+    .menu-toggle {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+
+      width: 16px;
+      height: 12px;
+      padding: 10px;
+
+      @media screen and (min-width: $md-min) {
+        width: 22px;
+        height: 16px;
+      }
+      @media screen and (min-width: $xl-min) {
+        display: none;
+      }
+
+      span {
+        display: block;
+
+        width: 100%;
+        height: 2px;
+
+        background: #0f0f0f;
+        transition: .3s;
+      }
+    }
+
+    &.menu-open {
+      .menu-toggle {
+        span {
+          &:first-child {
+            transform: translateY(5px) rotate(45deg);
+
+            @media screen and (min-width: $md-min) {
+              transform: translateY(7px) rotate(45deg);
+            }
+          }
+          &:nth-child(2) {
+            opacity: 0;
+          }
+          &:last-child {
+            transform: translateY(-5px) rotate(-45deg);
+
+            @media screen and (min-width: $md-min) {
+              transform: translateY(-7px) rotate(-45deg);
+            }
+          }
+        }
+      }
+
+      #block-telerion-theme-main-menu {
+        left: 0;
+      }
+    }
+  }
+}
+
+footer {
+  position: relative;
+  z-index: 2;
+
+  .region.region-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 40px 0;
+
+    @media screen and (min-width: $xl-min) {
+      padding-bottom: 60px;
+    }
+
+    .copyright-statement {
+      margin-top: 30px;
+      font-size: 13px;
+      color: $color-text;
+    }
+  }
+}

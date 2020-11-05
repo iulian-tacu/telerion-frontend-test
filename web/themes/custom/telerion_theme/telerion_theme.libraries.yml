@@ -1,0 +1,44 @@
+global-styling:
+  css:
+    theme:
+      assets/css/main.min.css: {}
+      '//fonts.googleapis.com/css2?family=Livvic:wght@300;400;500;700&display=swap': { type: external, minified: true }
+  js:
+    assets/js/global.min.js: { minified: true }
+  dependencies:
+    - core/jquery
+    - core/drupal
+
+slick-carousel:
+  css:
+    theme:
+      slick-carousel/slick/slick.css: {}
+      slick-carousel/slick/slick-theme.css: {}
+  js:
+    slick-carousel/slick/slick.min.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+
+paragraph-expertise-section:
+  js:
+    assets/js/paragraph_expertise_section.min.js: { minified: true }
+
+paragraph-about-me-section:
+  js:
+    assets/js/about_me.min.js: { minified: true }
+  dependencies:
+    - core/jquery
+    - core/drupal
+
+react-portfolio:
+  js:
+    assets/js/react-portfolio.min.js: { minified: true }
+
+react-contact-form:
+  js:
+    assets/js/react-contact-form.min.js: { minified: true }
+
+field-testimonials:
+  js:
+    assets/js/field_testimonials.min.js: { minified: true }

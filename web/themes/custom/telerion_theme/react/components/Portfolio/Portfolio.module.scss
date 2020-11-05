@@ -1,0 +1,112 @@
+.Portfolio {
+  padding: 40px 0 0;
+  background: #3B43F2;
+
+  @media screen and (min-width: 768px) {
+    padding-top: 80px;
+  }
+  @media screen and (min-width: 768px) {
+    padding-top: 120px;
+  }
+
+  & > :global(.title) {
+    margin: 0 15px;
+
+    font-size: 32px;
+    line-height: 1.8;
+    font-weight: 700;
+    color: #FFF;
+
+    @media screen and (min-width: 576px) {
+      margin: 0 30px;
+    }
+    @media screen and (min-width: 768px) {
+      margin: 0 80px;
+      font-size: 46px;
+    }
+    @media screen and (min-width: 992px) {
+      margin: 0 80px 0 200px;
+      font-size: 52px;
+    }
+    @media screen and (min-width: 1200px) {
+      font-size: 60px;
+    }
+  }
+
+  & > :global(.subtitle) {
+    max-width: 330px;
+    margin: 10px 15px 30px;
+    font-size: 14px;
+    color: #FFF;
+
+    @media screen and (min-width: 576px) {
+      margin: 10px 30px 40px;
+    }
+    @media screen and (min-width: 768px) {
+      margin: 10px 80px 40px;
+    }
+    @media screen and (min-width: 992px) {
+      margin: 10px 80px 40px 200px;
+      font-size: 15px;
+    }
+  }
+
+  :global(.tabs-wrapper) {
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (min-width: 992px) {
+      flex-direction: row;
+      justify-content: space-between;
+      margin: 0 80px 0 200px;
+    }
+    @media screen and (min-width: 1600px) {
+      margin: 0 200px;
+    }
+
+    & > :global(.view-all-btn) {
+      width: 100%;
+      margin: 30px 0;
+      text-align: center;
+
+      @media screen and (min-width: 768px) {
+        margin: 50px 0 30px;
+      }
+      @media screen and (min-width: 992px) {
+        width: unset;
+        margin: 0;
+      }
+
+      a {
+        width: 100%;
+        max-width: 320px;
+        box-sizing: border-box;
+
+        @media screen and (min-width: 992px) {
+          padding: 0 50px;
+        }
+      }
+    }
+  }
+
+  :global(.projects) {
+    margin-top: 80px;
+    padding-bottom: 2px;
+    background: #222A41;
+
+    @media screen and (min-width: 768px) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 2px;
+
+      padding: 0 2px;
+    }
+    @media screen and (min-width: 992px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media screen and (min-width: 1200px) {
+      grid-gap: 0;
+      padding: 0;
+    }
+  }
+}

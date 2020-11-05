@@ -1,0 +1,56 @@
+uuid: 9735a002-28e1-4cde-b729-dd68865713f8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.clients_section.field_body
+    - field.field.paragraph.clients_section.field_clients
+    - field.field.paragraph.clients_section.field_supertitle
+    - field.field.paragraph.clients_section.field_title
+    - paragraphs.paragraphs_type.clients_section
+  module:
+    - paragraphs
+id: paragraph.clients_section.default
+targetEntityType: paragraph
+bundle: clients_section
+mode: default
+content:
+  field_body:
+    weight: 2
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_clients:
+    type: entity_reference_paragraphs
+    weight: 3
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: _none
+    third_party_settings: {  }
+    region: content
+  field_supertitle:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_title:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

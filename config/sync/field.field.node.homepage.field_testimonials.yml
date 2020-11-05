@@ -1,0 +1,52 @@
+uuid: b67d67b8-acde-4788-a335-90fc381d7539
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_testimonials
+    - node.type.homepage
+    - paragraphs.paragraphs_type.testimonial
+  module:
+    - entity_reference_revisions
+id: node.homepage.field_testimonials
+field_name: field_testimonials
+entity_type: node
+bundle: homepage
+label: Testimonials
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      testimonial: testimonial
+    target_bundles_drag_drop:
+      about_me_section:
+        weight: 9
+        enabled: false
+      about_me_tab:
+        weight: 10
+        enabled: false
+      client:
+        weight: 11
+        enabled: false
+      clients_section:
+        weight: 12
+        enabled: false
+      expertise_card:
+        weight: 13
+        enabled: false
+      expertise_section:
+        weight: 14
+        enabled: false
+      hero_section:
+        weight: 15
+        enabled: false
+      testimonial:
+        enabled: true
+        weight: 16
+field_type: entity_reference_revisions

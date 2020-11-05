@@ -1,0 +1,10 @@
+uuid: d1a41cda-7628-4af6-bbb5-7f68ae4011ca
+langcode: en
+status: true
+dependencies: {  }
+id: about_me_section
+label: 'About Me Section'
+icon_uuid: null
+icon_default: null
+description: 'Paragraph type used to add the ''About Me'' section on homepage.'
+behavior_plugins: {  }

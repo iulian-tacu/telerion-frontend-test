@@ -1,0 +1,19 @@
+uuid: 00ee7502-00aa-46e2-b92e-cbe53eafbbaa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_supertitle
+    - paragraphs.paragraphs_type.about_me_section
+id: paragraph.about_me_section.field_supertitle
+field_name: field_supertitle
+entity_type: paragraph
+bundle: about_me_section
+label: Supertitle
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

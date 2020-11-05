@@ -1,0 +1,60 @@
+.btn {
+  &.primary {
+    a,
+    &a {
+      border-radius: 20px;
+      padding: 0 37px;
+
+      font-size: 16px;
+      line-height: 40px;
+      font-weight: 500;
+      text-decoration: none;
+      color: #FFF;
+
+      background: $color-main;
+
+      position: relative;
+      overflow: hidden;
+
+      &::before {
+        content: '';
+        display: block;
+        position: absolute;
+
+        top: 0;
+        left: -105px;
+        width: 100px;
+        height: 50px;
+
+        background: linear-gradient(to right, transparent 0%, rgba(255, 255, 255, .1) 50%, transparent 100%);
+      }
+
+      &:hover {
+        &::before {
+          left: calc(100% + 105px);
+          transition: left 1s;
+        }
+      }
+    }
+
+    &.big {
+      a,
+      &a {
+        line-height: 50px;
+        border-radius: 25px;
+      }
+    }
+
+    &.white {
+      a,
+      &a {
+        color: $color-main;
+        background: #FFF;
+
+        &::before {
+          background: linear-gradient(to right, transparent 0%, rgba(59, 67, 242, .1) 50%, transparent 100%);
+        }
+      }
+    }
+  }
+}

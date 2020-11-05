@@ -1,0 +1,51 @@
+uuid: 8f6becce-5d11-496a-8dc2-6126116b97da
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.testimonial.field_author
+    - field.field.paragraph.testimonial.field_body
+    - field.field.paragraph.testimonial.field_image
+    - field.field.paragraph.testimonial.field_position
+    - image.style.scale_crop_310x370
+    - paragraphs.paragraphs_type.testimonial
+  module:
+    - media
+id: paragraph.testimonial.default
+targetEntityType: paragraph
+bundle: testimonial
+mode: default
+content:
+  field_author:
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_body:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_image:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: scale_crop_310x370
+      image_link: ''
+    third_party_settings: {  }
+    type: media_thumbnail
+    region: content
+  field_position:
+    weight: 3
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

@@ -1,0 +1,9 @@
+{% extends "paragraph.html.twig" %}
+    {% block content %}
+      <div class="text">
+        {{ content|without('field_image') }}
+      </div>
+      <div class="image">
+        {{ content.field_image }}
+      </div>
+    {% endblock %}

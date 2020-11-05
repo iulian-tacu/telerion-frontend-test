@@ -1,0 +1,15 @@
+core_version_requirement: ^9.0
+type: theme
+base theme: stark
+
+name: 'Telerion'
+description: 'The default Telerion theme.'
+
+regions:
+  header: 'Header'
+  highlighted: 'Highlighted'
+  content: 'Content'
+  footer: 'Footer'
+
+libraries:
+  - 'telerion_theme/global-styling'

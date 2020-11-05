@@ -1,0 +1,43 @@
+uuid: 2c55b237-d455-4493-ad3a-2893f07238e8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_cards
+    - paragraphs.paragraphs_type.expertise_card
+    - paragraphs.paragraphs_type.expertise_section
+  module:
+    - entity_reference_revisions
+id: paragraph.expertise_section.field_cards
+field_name: field_cards
+entity_type: paragraph
+bundle: expertise_section
+label: Cards
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      expertise_card: expertise_card
+    target_bundles_drag_drop:
+      about_me_section:
+        weight: 6
+        enabled: false
+      about_me_tab:
+        weight: 7
+        enabled: false
+      expertise_card:
+        enabled: true
+        weight: 8
+      expertise_section:
+        weight: 9
+        enabled: false
+      hero_section:
+        weight: 10
+        enabled: false
+field_type: entity_reference_revisions

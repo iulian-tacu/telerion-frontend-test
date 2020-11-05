@@ -1,0 +1,19 @@
+uuid: 2f7a49a4-b126-44f7-beea-54a0d336f774
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_body
+    - paragraphs.paragraphs_type.hero_section
+id: paragraph.hero_section.field_body
+field_name: field_body
+entity_type: paragraph
+bundle: hero_section
+label: Body
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

@@ -1,0 +1,81 @@
+.ContactForm {
+  margin: 0 30px;
+  border-radius: 14px;
+  padding: 40px 60px;
+
+  background: #FFF;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .2);
+
+  @media screen and (min-width: 576px) {
+    margin: 0 60px;
+  }
+  @media screen and (min-width: 768px) {
+    display: block;
+
+    max-width: 650px;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+  @media screen and (min-width: 1200px) {
+    border-radius: 18px;
+    padding: 60px 80px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, .2);
+  }
+
+  :global(.title) {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    color: #222A41;
+
+    @media screen and (min-width: 992px) {
+      font-size: 18px;
+    }
+  }
+
+  form {
+    margin-top: 40px;
+    text-align: center;
+
+    input,
+    textarea {
+      display: block;
+
+      width: 100%;
+      height: auto;
+      margin-top: 30px;
+      border: solid #AEB7C1;
+      border-width: 0 0 1px;
+      padding: 5px 10px;
+
+      font-size: 15px;
+      line-height: 24px;
+
+      outline: none;
+      resize: none;
+      color: #222A41;
+
+      &::placeholder {
+        color: #6D7783;
+      }
+    }
+
+    textarea {
+      min-height: 100px;
+    }
+
+    :global(.submit-btn) {
+      display: inline-block;
+      position: relative;
+
+      width: unset;
+      padding: 0 25px;
+      border-radius: 25px;
+
+      line-height: 50px;
+      color: #FFF;
+
+      background: #3B43F2;
+    }
+  }
+}

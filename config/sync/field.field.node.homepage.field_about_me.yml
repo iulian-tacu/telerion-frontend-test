@@ -1,0 +1,37 @@
+uuid: 20f43d9b-723b-457f-bf4d-26084828f93a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_about_me
+    - node.type.homepage
+    - paragraphs.paragraphs_type.about_me_section
+  module:
+    - entity_reference_revisions
+id: node.homepage.field_about_me
+field_name: field_about_me
+entity_type: node
+bundle: homepage
+label: 'About Me'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      about_me_section: about_me_section
+    target_bundles_drag_drop:
+      about_me_section:
+        enabled: true
+        weight: 4
+      about_me_tab:
+        weight: 5
+        enabled: false
+      hero_section:
+        weight: 6
+        enabled: false
+field_type: entity_reference_revisions

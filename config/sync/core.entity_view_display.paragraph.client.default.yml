@@ -1,0 +1,24 @@
+uuid: 56573ecf-ba3b-4c07-a376-25c34b14d782
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.client.field_image
+    - paragraphs.paragraphs_type.client
+  module:
+    - media
+id: paragraph.client.default
+targetEntityType: paragraph
+bundle: client
+mode: default
+content:
+  field_image:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: media_thumbnail
+    region: content
+hidden: {  }

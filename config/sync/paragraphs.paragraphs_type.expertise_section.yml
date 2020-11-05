@@ -1,0 +1,10 @@
+uuid: 909ffe30-9565-4f07-b534-a5cf5e4195fb
+langcode: en
+status: true
+dependencies: {  }
+id: expertise_section
+label: 'Expertise Section'
+icon_uuid: null
+icon_default: null
+description: 'Paragraph type used to add the ''Expertise'' section on the homepage.'
+behavior_plugins: {  }

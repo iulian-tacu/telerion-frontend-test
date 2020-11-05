@@ -1,0 +1,19 @@
+uuid: bc7d33f8-8b1c-4044-8ddd-fede94d4119e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_supertitle
+    - paragraphs.paragraphs_type.expertise_section
+id: paragraph.expertise_section.field_supertitle
+field_name: field_supertitle
+entity_type: paragraph
+bundle: expertise_section
+label: Supertitle
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

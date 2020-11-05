@@ -1,0 +1,22 @@
+uuid: d5894103-82cd-4bfd-8fd7-5de0114c2ea9
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - telerion_theme
+_core:
+  default_config_hash: 8I8iACSa0sKO3k3jlvUG1ge52rfcKX7USJAQYnzuBgg
+id: telerion_theme_help
+theme: telerion_theme
+region: content
+weight: -30
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,23 @@
+uuid: 7a7b231d-cf3a-4356-b07f-2eb966edf0ed
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_button
+    - paragraphs.paragraphs_type.about_me_section
+  module:
+    - link
+id: paragraph.about_me_section.field_button
+field_name: field_button
+entity_type: paragraph
+bundle: about_me_section
+label: Button
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link
